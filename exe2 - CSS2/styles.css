@@ -1,0 +1,36 @@
+body {
+  background: rgb(161, 213, 218);
+  padding: 0 8%;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  padding: 20px;
+  height: 100vh;
+  background-image: url(roma.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  max-height: 250px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 10px solid rgba(131, 91, 39, 0.85);
+  border-radius: 30px;
+  padding: 20px 10px 0 10px;
+}
+
+strong {
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin-top: 16px;
+}
