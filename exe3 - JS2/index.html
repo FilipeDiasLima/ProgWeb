@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <title>Pedra-Papel-Tesoura</title>
+</head>
+<body>
+  <script src="script.js"></script>
+  <div class="container">
+    <div class="options">
+      <button id="0" onclick="getClick(this.id)">Pedra</button>
+      <button id="1" onclick="getClick(this.id)">Papel</button>
+      <button id="2" onclick="getClick(this.id)">Tesoura</button>
+    </div>
+    <div id="playerSide" class="playerSide">
+      <strong>Você</strong>
+    </div>
+    <div class="divisor"></div>
+    <div id="pcSide" class="pcSide">
+      <strong>Computador</strong>
+    </div>
+  </div>
+  <div id="result" class="result">
+    <strong>Resultado: </strong>
+  </div>
+</body>
+</html>
