@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Raio</title>
+</head>
+<body>
+  <script src="script.js"></script>
+  <div class="container">
+    <h1>Um Gráfico de Barras</h1>
+    <form name="myForm" onsubmit="calcula(event)">
+      <div>
+        <strong>Informe a altura das barras</strong>
+        <input name="barras1" type="text" placeholder="Ex: 5">
+        <input name="barras2" type="text" placeholder="Ex: 5">
+        <input name="barras3" type="text" placeholder="Ex: 5">
+        <input name="barras4" type="text" placeholder="Ex: 5">
+        <input name="barras5" type="text" placeholder="Ex: 5">
+      </div>
+      <div>
+        <strong>Informe a largura das barras</strong>
+        <input name="largura" type="text" placeholder="Ex: 5">
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+    <div class="bars">
+      <div id="bar1" class="bar1"></div>
+      <div id="bar2" class="bar2"></div>
+      <div id="bar3" class="bar3"></div>
+      <div id="bar4" class="bar4"></div>
+      <div id="bar5" class="bar5"></div>
+    </div>
+  </div>
+</body>
+</html>
