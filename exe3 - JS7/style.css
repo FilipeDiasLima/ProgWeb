@@ -1,0 +1,26 @@
+* {
+  box-sizing: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f6f6f6;
+  padding: 30px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+#ponto {
+  border-radius: 50%;
+  background: #ff0000;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
