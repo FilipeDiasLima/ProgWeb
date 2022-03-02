@@ -4,11 +4,13 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+
 function getClick (clicked_id) {
   let getImagePlayer = document.getElementById('imageChoicePlayer')
   let getImagePc = document.getElementById('imageChoicePc')
   let getPara = document.getElementById('paragraph')
-
+  let button = document.getElementById('0')
+  console.log(button.offsetLeft, button.offsetTop)
   if (getImagePlayer) {
     getImagePlayer.remove()
   }
