@@ -1,0 +1,41 @@
+@import "./variables.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./bootswatch.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif !important;
+  background: #333;
+  color: #fff;
+}
+
+.navbar {
+  padding: 10px 60px;
+}
+
+.container-xl {
+  margin: 0;
+  padding: 30px 100px;
+}
+
+.container-xl img {
+  width: 20%;
+  padding: 20px 0;
+}
+
+.container-md {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.container-md span {
+  padding-bottom: 10px;
+}
