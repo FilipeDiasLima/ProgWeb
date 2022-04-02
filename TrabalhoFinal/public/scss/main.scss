@@ -16,7 +16,32 @@ body {
   color: #fff;
 }
 
+.main_page {
+  display: flex;
+  padding: 30px 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main_page .game_button {
+  padding-top: 20px;
+}
+
+.main_page .game_button button {
+  width: 200px;
+}
+
+.main_page img {
+  width: 15%;
+}
+
 .navbar {
+  padding: 10px 60px;
+  background: #5570d3;
+}
+.tab-pane h1 {
   padding: 10px 60px;
 }
 
@@ -38,4 +63,164 @@ body {
 
 .container-md span {
   padding-bottom: 10px;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #242424;
+  padding: 20px;
+}
+
+#painelDivisor {
+  width: 100%;
+  background: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#painel {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: flex-start;
+  background: linear-gradient(180deg, #5570d3 0%, #252d4b 100%);
+  border-radius: 0 10px 10px 0;
+}
+
+#vidas div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#vidas div #vidaValor {
+  font-size: 20px;
+}
+
+#vidas div img {
+  width: 30px;
+  margin-left: 5px;
+}
+
+#velocidade div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 5px;
+}
+
+#distancia,
+#velocidade,
+#vidas {
+  display: flex;
+  flex-direction: column;
+}
+
+#distancia div {
+  margin-top: 5px;
+}
+
+#montanha {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px 0 0 10px;
+}
+
+#skier {
+  position: absolute;
+}
+
+.arvore {
+  background-image: url(../img/obstacles.png);
+  background-position: 0px -31px;
+  width: 28px;
+  height: 32px;
+  position: absolute;
+}
+
+.arvoreGrande {
+  background-image: url(../img/obstacles.png);
+  background-position: -96px -66px;
+  width: 32px;
+  height: 60px;
+  position: absolute;
+}
+
+.arbustoChamas {
+  background-image: url(../img/obstacles.png);
+  background-position: -22px -98px;
+  width: 28px;
+  height: 32px;
+  position: absolute;
+}
+
+.tocoArvore {
+  background-image: url(../img/obstacles.png);
+  background-position: -252px -33px;
+  width: 18px;
+  height: 30px;
+  position: absolute;
+}
+
+.cogumelo {
+  background-image: url(../img/obstacles.png);
+  background-position: -270px -43px;
+  width: 11px;
+  height: 20px;
+  position: absolute;
+}
+
+.rocha {
+  background-image: url(../img/obstacles.png);
+  background-position: -28px -31px;
+  width: 28px;
+  height: 32px;
+  position: absolute;
+}
+
+.cachorro {
+  background-image: url(../img/skier.png);
+  background-position: -21px -207px;
+  width: 25px;
+  height: 14px;
+  position: absolute;
+}
+
+.caiu {
+  background-image: url(../img/skier.png);
+  background-position: -84px -77px;
+  width: 32px;
+  height: 32px;
+}
+
+.morreu {
+  background-image: url(../img/skier.png);
+  background-position: -240px -2px;
+  width: 32px;
+  height: 32px;
+}
+
+.para-frente {
+  background-image: url(../img/skier.png);
+  background-position: -67px -2px;
+  width: 15px;
+  height: 32px;
+}
+
+.para-direita {
+  background-image: url(../img/skier.png);
+  background-position: -26px -6px;
+  width: 22px;
+  height: 28px;
+}
+
+.para-esquerda {
+  background-image: url(../img/skier.png);
+  background-position: -26px -43px;
+  width: 22px;
+  height: 28px;
 }
