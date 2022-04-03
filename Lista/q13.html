@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>O js apenas eleva as declarações, não as inicializações.
+     Se uma variável for declarada e inicializada após usá-lo, o valor
+     será undefined
+  </p>
+  <script>
+    function teste() {
+      console.log(a);
+      console.log(foo());
+      var a = 1;
+      function foo() {
+        return 2;
+      }
+    }
+    teste();
+  </script>
+</body>
+</html>

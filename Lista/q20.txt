@@ -1,0 +1,3 @@
+- Os Controllers são fornecidos.
+- O Routing são fornecidos.	
+- Usa middleware para o arranjo de funções sistematicamente do lado do servidor.

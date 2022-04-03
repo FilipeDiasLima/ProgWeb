@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>X: 2, Y: 1, Baz: 3+1(++baz) = resultando em 7</p>
+  <p>X: 2, Y: 1, Baz: 4+1(++baz) = resultando em 8</p>
+  <script>
+    (function() {
+      function foo(x) {
+        var baz = 3;
+        return function (y) {
+          console.log('x: ', x)
+          console.log('y: ', y)
+          console.log('baz: ', baz)
+          console.log(x + y + (++baz));
+        }
+      }
+      var moo = foo(2); // moo agora é um closure.
+      moo(1); // 7
+      moo(1); // 8
+  })();
+  </script>
+</body>
+</html>

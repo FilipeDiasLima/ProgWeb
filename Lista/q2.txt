@@ -1,0 +1,4 @@
+Sempre inclua os atributos width e/ou height das imagens,
+para que o browser saiba seus tamanhos antes de carregá-las
+Assim os browsers poderão reservar o lugar da imagem o espaço
+que a imagem antes de carregá-la

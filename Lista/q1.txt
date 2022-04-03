@@ -1,0 +1,5 @@
+<meta charset='UTF-8'>
+
+O “meta” deve estar dentro do head da página HTML
+Os elementos meta são tipicamente usados para especificar a
+descrição, as palavras-chave, e os autores dos documentos

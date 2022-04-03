@@ -1,0 +1,6 @@
+== (Igual a ou Equal to) - é usado para comparação entre duas variáveis, 
+independentemente do tipo de dados da variável.
+
+=== (Valor e Tipo igual) - é usado para a comparação entre duas variáveis, 
+mas isso irá verificar o tipo estrito, o que significa que ele irá verificar o 
+tipo de dados e comparar dois valores.

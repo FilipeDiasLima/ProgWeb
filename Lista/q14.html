@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>1 - Aurelio De Rosa</p>
+  <p>2 - John Doe</p>
+  <p>
+    Primeiro ele volta o fullname do obj.prop, pois está pegando o retorno da 
+    função getFullName dentro do obj.props, logo seu fullName será o de dentro 
+    do obj.
+  </p>
+  <p>
+    Depois ele guarda a função getFullName e como não vai ser chamado dentro do 
+    objeto prop, vai retornar o fullName do objeto obj.
+  </p>
+  <script>
+    var fullname = 'John Doe';
+    var obj = {
+      fullname: 'Colin Ihrig',
+      prop: {
+        fullname: 'Aurelio De Rosa',
+        getFullname: function() {
+          return this.fullname;
+        }
+      }
+    };
+    console.log(obj.prop.getFullname());
+    var test = obj.prop.getFullname;
+    console.log(test());
+  </script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+- Tipagem dinâmica: os tipos das variáveis são associados a
+valores, e não a variáveis

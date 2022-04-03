@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="icomp">Instituto de Computação</div>
+  <button id="add">Adicionar Estilos</button>
+  <button id="clean">Limpar Estilo</button>
+  <script>
+    var icomp = document.getElementById("icomp");
+    document.getElementById("add").onclick = function() {
+    icomp.style.setProperty("background-color", "lightgray");
+    icomp.style.setProperty("color", "red");
+    icomp.style.setProperty("font-size", "32px");
+    }
+    document.getElementById("clean").onclick = function() {
+    icomp.style.removeProperty("background-color");
+    icomp.style.removeProperty("color");
+    icomp.style.removeProperty("font-size");
+    }
+  </script>
+</body>
+</html>

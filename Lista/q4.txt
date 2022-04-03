@@ -1,0 +1,8 @@
+- Estilos inline: Declaram o formato de um elemento usando o
+atributo style do HTML 5.
+
+- Estilos embarcados: Nessa técnica, as diretrizes CSS são adicionadas ao conteúdo
+HTML através do elemento <style>.
+
+- Estilos externos: São arquivos que possuem apenas
+diretrizes CSS

@@ -1,0 +1,12 @@
+MVC: é um padrão de arquitetura de software que separa a
+aplicação em 3 camadas distintas.
+
+- Modelos, responsáveis pela leitura e escrita dos dados
+provenientes do SGBD utilizado pela aplicação.
+
+- Visões, responsáveis por gerar o conteúdo HTML que será enviado
+para o usuário para que esse possa interagir com a aplicação
+
+- Controladores, responsáveis por responder as requisições dos
+usuários, fazendo uso dos modelos e apresentando os resultados
+através das views

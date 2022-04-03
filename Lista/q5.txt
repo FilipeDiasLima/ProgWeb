@@ -1,0 +1,8 @@
+- Unidades Relativas: São medidas em relação ao tamanho de
+outros elementos da página - em, %, vw, vh
+
+- Unidades Absolutas: São unidade fixas, que não mudam de acordo
+com o comportamento da página - in, px, pt, cm, mm
+
+- A unidade "em" é usada para estabelecer tamanhos relativos ao
+tamanho da fonte do elemento atual

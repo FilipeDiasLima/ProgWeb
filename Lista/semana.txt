@@ -1,0 +1,7 @@
+seg
+ter
+qua
+qui
+sex
+sab
+dom

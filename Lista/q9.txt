@@ -1,0 +1,6 @@
+Ao clicar no botão com o ID "add", por script, é adicionado
+um background-color, uma font-color e font-size ao elemento 
+com o ID "icomp".
+
+Ao clicar no botão com o ID "clean", remove as mesmas 
+propriedades que foram adicionadas 
