@@ -224,3 +224,34 @@ body {
   width: 22px;
   height: 28px;
 }
+
+.top-cursos-page {
+  display: flex; 
+  flex-direction: row; 
+  width: 100%; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  display: flex; 
+  flex-direction: row; 
+  max-width: 40rem;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card a i {
+  color: #d24949;
+}
+
+.card-body {
+  display: flex; 
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}

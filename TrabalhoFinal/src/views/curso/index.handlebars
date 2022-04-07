@@ -1,0 +1,22 @@
+<div class="container-xl">
+  <div class="top-cursos-page" style="padding-bottom: 50px;">
+    <h1 style="padding-top: 10px">Cursos</h1>
+    <a class="game_button" href="/cursos/create">
+      <button type="button" class="btn btn-info">
+        <i class="fa-solid fa-plus" style="margin-right: 10px;"></i>
+        Adicionar novo curso
+      </button>
+    </a>
+  </div>
+  {{#each cursos}}
+  <div class="card border-info mb-3">
+    <div class="card-body">
+      <h4 class="card-title">{{ nome }}</h4>
+      <p class="card-text">{{ area }}</p>
+    </div>
+    <a href="/cursos">
+      <i class="fa-solid fa-trash-can"></i>
+    </a>
+  </div>
+  {{/each}}
+</div>
