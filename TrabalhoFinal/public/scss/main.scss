@@ -234,24 +234,51 @@ body {
 }
 
 .card {
-  display: flex; 
-  flex-direction: row; 
-  max-width: 40rem;
-  align-items: center;
-  padding: 20px 30px;
-}
-
-.card a {
   text-decoration: none;
+  max-width: 35rem;
+  width: 100%;
+  color: #ffffff;
+  transition: transform 0.3s;
 }
 
-.card a i {
-  color: #d24949;
+.card:hover {
+  color: #ffffff;
+  transform: scale(1.03);
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background: #5570d3;
+  border-bottom: none;
+  padding: 15px 20px;
+  text-align: justify;
+}
+
+.card-header h4 {
+  margin: 0;
+}
+
+.card-header button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
+.card-header button:hover {
+  color: #f03636;
 }
 
 .card-body {
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  padding: 0;
-  margin: 0;
+}
+
+.card-body strong {
+  padding: 10px 0;
 }

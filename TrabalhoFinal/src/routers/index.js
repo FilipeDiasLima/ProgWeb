@@ -12,11 +12,11 @@ router.get("/game", MainController.game);
 router.get("/areas", AreaController.index);
 
 router.get("/cursos", CursoController.index);
-router.get("/cursos/read/:id", CursoController.read);
+router.get("/cursos/:id", CursoController.read);
 router.get("/cursos/create", CursoController.create);
 router.post("/cursos/create", CursoController.create);
-router.get("/cursos/:id", CursoController.update);
-router.put("/cursos/:id", CursoController.update);
-router.delete("/cursos/:id", CursoController.remove);
+router.get("/cursos/update/:id", CursoController.update);
+router.post("/cursos/update/:id", CursoController.update);
+router.post("/cursos/remove/:id", CursoController.remove);
 
 module.exports = router;

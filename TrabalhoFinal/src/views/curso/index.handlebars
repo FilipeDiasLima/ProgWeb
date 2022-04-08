@@ -9,14 +9,19 @@
     </a>
   </div>
   {{#each cursos}}
-  <div class="card border-info mb-3">
-    <div class="card-body">
+  <a class="card border-info mb-3" href="/cursos/{{ id }}">
+    <div class="card-header">
       <h4 class="card-title">{{ nome }}</h4>
-      <p class="card-text">{{ area }}</p>
+      <form method="post" action="/cursos/remove/{{ id }}">
+        <button type="submit">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </form>
     </div>
-    <a href="/cursos">
-      <i class="fa-solid fa-trash-can"></i>
-    </a>
-  </div>
+    <div class="card-body">
+      <strong>{{ area }}</strong>
+      <p class="card-text">{{ descricao }}</p>
+    </div>
+  </a>
   {{/each}}
 </div>

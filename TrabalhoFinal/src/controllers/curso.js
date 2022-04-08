@@ -19,7 +19,17 @@ const index = async (req, res) => {
   });
 };
 
-const read = async (req, res) => {};
+const read = async (req, res) => {
+  try {
+    const curso = await Curso.findByPk(req.params.id);
+
+    res.render("curso/read", {
+      curso: curso.toJSON(),
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 const create = async (req, res) => {
   if (req.route.methods.get) {
@@ -32,6 +42,7 @@ const create = async (req, res) => {
       await Curso.create({
         nome: req.body.nome,
         areaId: req.body.areaId,
+        descricao: req.body.descricao,
       });
       res.redirect("/cursos");
     } catch (err) {
@@ -42,6 +53,14 @@ const create = async (req, res) => {
 
 const update = async (req, res) => {};
 
-const remove = async (req, res) => {};
+const remove = async (req, res) => {
+  const curso = await Curso.findByPk(req.params.id);
+
+  if (curso) {
+    curso.destroy();
+  }
+
+  res.redirect("/cursos");
+};
 
 module.exports = { index, read, create, update, remove };
