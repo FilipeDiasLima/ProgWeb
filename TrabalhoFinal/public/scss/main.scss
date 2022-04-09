@@ -41,6 +41,7 @@ body {
   padding: 10px 60px;
   background: #5570d3;
 }
+
 .tab-pane h1 {
   padding: 10px 60px;
 }
@@ -69,7 +70,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background: #242424;
   padding: 20px;
 }
 
@@ -281,4 +281,27 @@ body {
 
 .card-body strong {
   padding: 10px 0;
+}
+
+.areas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.areas hr {
+  background: #ffffff;
+  height: 1px;
+  width: 50%;
+}
+
+.areas strong {
+  font-size: 20px;
+  color: #FFF;
+  padding: 20px;
+}
+
+.areas strong i {
+  margin-right: 10px;
 }

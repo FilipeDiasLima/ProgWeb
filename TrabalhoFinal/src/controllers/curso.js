@@ -22,9 +22,10 @@ const index = async (req, res) => {
 const read = async (req, res) => {
   try {
     const curso = await Curso.findByPk(req.params.id);
-
+    const area = await Area.findByPk(curso.toJSON().areaId);
     res.render("curso/read", {
       curso: curso.toJSON(),
+      area: area.toJSON(),
     });
   } catch (err) {
     console.log(err);
@@ -51,11 +52,34 @@ const create = async (req, res) => {
   }
 };
 
-const update = async (req, res) => {};
+const update = async (req, res) => {
+  const curso = await Curso.findByPk(req.params.id);
+  if (req.route.methods.get) {
+    const areas = await Area.findAll();
+    res.render("curso/update", {
+      curso: curso.toJSON(),
+      areas: areas.map((area) => area.toJSON()),
+    });
+  } else {
+    try {
+      await Curso.update(
+        {
+          nome: req.body.nome,
+          areaId: Number(req.body.areaId),
+          descricao: req.body.descricao,
+        },
+        { where: { id: req.params.id } }
+      );
+      res.redirect("/cursos");
+    } catch (err) {
+      console.log(err);
+    }
+  }
+};
 
 const remove = async (req, res) => {
   const curso = await Curso.findByPk(req.params.id);
-
+  console.log(curso);
   if (curso) {
     curso.destroy();
   }

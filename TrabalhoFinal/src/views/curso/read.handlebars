@@ -1,3 +1,25 @@
 <div class="container-xl">
-  <h1>{{ curso.nome }}</h1>
+  <div class="top-cursos-page">
+    <h1 style="padding-top: 10px">{{ curso.nome }}</h1>
+    <a class="game_button" href="/cursos">
+      <button type="button" class="btn btn-secondary">
+        <i class="fa-solid fa-arrow-left-long" style="margin-right: 10px;"></i>
+        Voltar
+      </button>
+    </a>
+  </div>
+  <hr style="width: 72%;">
+  <div style="margin-top: 20px; font-size: 20px; width: 70%;">
+    <p style="margin-top: 20px;">{{ area.area }}</p>
+    <p style="margin-top: 20px;">{{ curso.descricao }}</p>
+  </div>
+  <hr style="width: 72%;">
+  <div style="display: flex; flex-direction: row; width: 20%; justify-content: space-between">
+    <a href="/cursos/update/{{ curso.id }}">
+      <button type="button" class="btn btn-lg btn-info">Editar</button>
+    </a>
+    <form method="post" action="/cursos/remove/{{ curso.id }}">
+      <button type="submit" class="btn btn-lg btn-danger">Deletar</button>
+    </form>
+  </div>
 </div>

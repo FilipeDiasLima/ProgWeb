@@ -1,7 +1,7 @@
 (function () {
   const FPS = 50;
   const TAMX = 600;
-  const TAMY = 800;
+  const TAMY = 600;
   const PROB_ALTA = 3;
   const PROB_MEDIA = 2;
   const PROB_BAIXA = 1;

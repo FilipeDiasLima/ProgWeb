@@ -1,8 +1,10 @@
 <div class="container-xl">
   <h1 style="padding-top: 10px">Áreas de Conhecimento</h1>
-  <ul>
+  <hr style="width: 100%; height: 1px; background: #FFF">
+  <div class="areas">
     {{#each areas}}
-    <li>{{area}}</li>
+    <strong><i class="fa-solid fa-caret-right"></i>{{area}}</strong>
+    <hr>
     {{/each}}
-  </ul>
+  </div>
 </div>
