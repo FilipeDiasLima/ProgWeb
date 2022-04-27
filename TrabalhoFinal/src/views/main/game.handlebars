@@ -25,10 +25,30 @@
       <div id="distancia">
         <strong>Distância percorrida:</strong>
         <div>
-          <span id="distanciaValor"></span>
+          <span id="distanciaValor" name="score"></span>
+          <span>metros</span>
+        </div>
+      </div>
+      <hr id="painelDivisor">
+      <div id="distancia" class="scoreRecord">
+        <strong>MAIOR PONTUAÇÃO:</strong>
+        <div>
+          <span id="distanciaValor" name="scoreRecord">{{ scoreRecord }}</span>
           <span>metros</span>
         </div>
       </div>
     </div>
+    <div id="scoreContainer" class="scoreContainer" style="display: none;">
+      <form action="/game" method="post">
+        <div class="modalScore">
+          <strong class="titleModal">Game over</strong>
+          <div class="line"></div>
+          <strong>Distância:
+            <input id="distanciaValorFinal" name="score" value="{{ score }}" readonly="readonly">
+            metros
+          </strong>
+          <button class="saveScore" type="submit">SALVAR</button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>

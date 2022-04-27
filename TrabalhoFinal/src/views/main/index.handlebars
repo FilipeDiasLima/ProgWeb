@@ -1,5 +1,8 @@
 <div class="tab-pane fade active show" id="home">
   <div class="main_page">
+    {{#if isLogged}}
+    <p>Fala meu chegado. Muito bem-vindo, <strong>{{ nome }}</strong>!</p>
+    {{/if}}
     <img src="/img/skifree.jpg" alt="skifree">
     <h1>SkiFree</h1>
     <strong class="text-success">Um trabalho desenvolvido no curso de Programação Web - UFAM</strong>
@@ -7,8 +10,14 @@
       "Não tá muito bonito porque eu não manjo de bootstrap :D"
     </span>
     <span>Filipe Dias</span>
+    {{#if isLogged}}
     <a class="game_button" href="/game">
       <button type="button" class="btn btn-info">Jogar</button>
     </a>
+    {{else}}
+    <a class="game_button" href="/login">
+      <button type="button" class="btn btn-info">Entrar na aplicação</button>
+    </a>
+    {{/if}}
   </div>
 </div>

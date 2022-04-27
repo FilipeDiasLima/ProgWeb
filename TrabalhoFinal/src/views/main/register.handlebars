@@ -1,0 +1,46 @@
+<div class="container-xl">
+  <div class="top-cursos-page">
+    <h1 style="padding-top: 10px">Login</h1>
+  </div>
+
+  <form action="/register" method="post">
+    <div class="form-group" style="width: 50%;">
+      <label class="col-form-label mt-4" for="nome">Nome completo</label>
+      <input type="text" name="nome" id="nome" value="{{ user.nome }}" class="form-control" required
+        placeholder="João Souza">
+
+      <label class="col-form-label mt-4" for="email">E-mail</label>
+      <input type="text" name="email" id="email" value="{{ user.email }}" class="form-control" required
+        placeholder="example@email.com">
+
+      <label for="password" class="form-label mt-4">Senha</label>
+      <input type="password" class="form-control" id="password" name="senha" value="{{ user.senha }}"
+        placeholder="*****">
+
+      <fieldset class="form-group">
+        <legend class="mt-4">Selecione uma Área</legend>
+        {{#each cursos}}
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="cursoId" id="cursoId" value="{{ id }}" required>
+            {{ nome }}
+          </label>
+        </div>
+        {{/each}}
+      </fieldset>
+
+      <div class="form-check" style="margin-top: 30px;">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+        <label class="form-check-label" for="flexCheckDefault">
+          Eu li e aceito os <strong>Termos de Uso</strong> e <strong>Politicas de Privacidade</strong>
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-lg btn-info" type="button"
+        style="margin-top: 30px; width: 100%; margin-bottom: 10px">
+        Cadastrar
+      </button>
+      <a href="/login">Já tenho conta</a>
+    </div>
+  </form>
+</div>

@@ -122,6 +122,43 @@ body {
   margin-top: 5px;
 }
 
+.container-xl {
+  max-width: 80vw !important;
+  width: 100%;
+}
+
+.cursosContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  height: 100%;
+  max-width: 100%;
+}
+
+.cursosContainer a {
+  margin-right: 25px;
+  margin-top: 45px;
+  min-height: 235px;
+}
+
+.scoreRecord {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: linear-gradient(180deg, #E1C86D 0%, #F0F1A5 51.04%, #C7B623 100%);
+  border: 6px solid #E1C86D;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  color: #5570d3;
+  font-weight: bold;
+  text-align: center;
+}
+
 #montanha {
   position: relative;
   overflow: hidden;
@@ -235,7 +272,7 @@ body {
 
 .card {
   text-decoration: none;
-  max-width: 35rem;
+  max-width: 30rem;
   width: 100%;
   color: #ffffff;
   transition: transform 0.3s;
@@ -304,4 +341,72 @@ body {
 
 .areas strong i {
   margin-right: 10px;
+}
+
+.scoreContainer {
+  width: calc(600px + 207px);
+  height: 600px;
+  background: rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreContainer form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalScore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px; 
+  width: 100%;
+  color: #242424;
+}
+
+.titleModal {
+  font-size: 20px;
+  color: #242424;
+}
+
+.line {
+  background: #414141;
+  height: 2px;
+  border-radius: 50%;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.modalScore strong input {
+  color: #3535b4;
+  font-size: 18px;
+  border: none;
+}
+
+.saveScore {
+  border: none;
+  background: #5570d3;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.saveScore:hover {
+  background: #2e55e3;
 }

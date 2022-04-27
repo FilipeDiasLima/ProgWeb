@@ -11,6 +11,8 @@
   let velAumentada = false;
   let jogadorVivo = true;
   let vidas = 3;
+  let globalDistancia = 0;
+  let requests = 0;
 
   const arvores = [];
   const arvoresGrandes = [];
@@ -193,6 +195,7 @@
   function distanciaCalcula(valor) {
     let distancia = document.getElementById("distanciaValor");
     let somaMetros = String((Number(distancia.innerHTML) + valor).toFixed(2));
+    globalDistancia = somaMetros;
     distancia.innerHTML = somaMetros;
   }
 
@@ -263,12 +266,13 @@
       skier.andar();
     } else {
       skier.morreu();
+      if (requests === 0) {
+        document.getElementById("distanciaValorFinal").value = globalDistancia;
+        document.getElementById("scoreContainer").style.display = "flex";
+      }
+      requests++;
     }
   }
 
   init();
 })();
-
-Handlebars.registerHelper("ifEquals", function (arg1, arg2, options) {
-  return arg1 == arg2 ? options.fn(this) : options.inverse(this);
-});

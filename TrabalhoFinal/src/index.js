@@ -4,6 +4,9 @@ const morgan = require("morgan");
 const router = require("./routers");
 const { resolve } = require("path");
 const sass = require("node-sass-middleware");
+const session = require("express-session");
+const uuid = require("uuid");
+const cookieParser = require("cookie-parser");
 
 const app = express();
 
@@ -16,6 +19,10 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 app.set("views", resolve(__dirname, "views"));
+let hbs = require("handlebars");
+hbs.registerHelper("listItem", (index) => {
+  return index + 1;
+});
 
 app.use(
   sass({
@@ -47,6 +54,24 @@ app.use("/js", [
     resolve(__dirname, "..", "node_modules", "bootstrap", "dist", "js")
   ),
 ]);
+
+app.use(cookieParser());
+
+app.use(
+  session({
+    genid: (req) => {
+      return uuid.v4(); // usamos UUIDs para gerar os SESSID
+    },
+    secret: "Hi9Cf#mK98",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
+app.use((req, res, next) => {
+  app.locals.isLogged = "uid" in req.session;
+  next();
+});
 
 app.use(express.urlencoded({ extended: true }));
 app.use(router);

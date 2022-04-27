@@ -20,11 +20,15 @@
       </a>
       <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav me-auto">
+          {{#if isLogged}}
           <li class="nav-item">
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/game">Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ranking">Ranking</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/areas">Areas</a>
@@ -35,7 +39,20 @@
           <li class="nav-item">
             <a class="nav-link" href="/about">Sobre</a>
           </li>
+          {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">Cadastrar</a>
+          </li>
+          {{/if}}
         </ul>
+        {{#if isLogged}}
+        <button class="btn btn-secondary my-2 my-sm-0" type="button">
+          <a href="/logout" style="text-decoration: none; color: #FFF">Logout</a>
+        </button>
+        {{/if}}
       </div>
     </div>
   </nav>

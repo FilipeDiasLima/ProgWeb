@@ -8,20 +8,22 @@
       </button>
     </a>
   </div>
-  {{#each cursos}}
-  <a class="card border-info mb-3" href="/cursos/{{ id }}">
-    <div class="card-header">
-      <h4 class="card-title">{{ nome }}</h4>
-      <form method="post" action="/cursos/remove/{{ id }}">
-        <button type="submit">
-          <i class="fa-solid fa-trash-can"></i>
-        </button>
-      </form>
-    </div>
-    <div class="card-body">
-      <strong>{{ area }}</strong>
-      <p class="card-text">{{ descricao }}</p>
-    </div>
-  </a>
-  {{/each}}
+  <div class="cursosContainer">
+    {{#each cursos}}
+    <a class="card border-info mb-3" href="/cursos/{{ id }}">
+      <div class="card-header">
+        <h4 class="card-title">{{ nome }}</h4>
+        <form method="post" action="/cursos/remove/{{ id }}">
+          <button type="submit">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </form>
+      </div>
+      <div class="card-body">
+        <strong>{{ area }}</strong>
+        <p class="card-text">{{ descricao }}</p>
+      </div>
+    </a>
+    {{/each}}
+  </div>
 </div>
